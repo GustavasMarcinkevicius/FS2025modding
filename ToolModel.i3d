@@ -8,12 +8,9 @@
   <Files>
   </Files>
 
-
   <Materials>
-    <Material name="UnnamedMaterial" materialId="10" diffuseColor="1 1 1 1">
-    </Material>
+    <Material name="UnnamedMaterial" materialId="10" diffuseColor="1 1 1 1"/>
   </Materials>
-
 
   <Shapes>
     <IndexedTriangleSet name="cube" shapeId="1" meshUsage="0" bvCenter="0 0 0" bvRadius="0.866025" isOptimized="true">
@@ -64,7 +61,19 @@
   </Shapes>
 
   <Scene>
-    <Shape name="cube" scale="3 1 1" shapeId="1" nodeId="9" castsShadows="false" receiveShadows="false" distanceBlending="false" materialIds="10"/>
+    <!-- Root node 0 -->
+    <Group name="root" nodeId="0" translation="0 0 0" rotation="0 0 0 1" scale="1 1 1" castsShadows="false" receiveShadows="false" distanceBlending="false">
+      <!-- graphics node 0>0 -->
+      <Group name="graphicsNode" nodeId="1" translation="0 0 0" rotation="0 0 0 1" scale="1 1 1" castsShadows="true" receiveShadows="true" distanceBlending="false">
+        <Shape name="cube" scale="3 1 1" shapeId="1" nodeId="9" castsShadows="true" receiveShadows="true" distanceBlending="false" materialIds="10"/>
+      </Group>
+      <!-- handNode 0>1 -->
+      <Group name="handNode" nodeId="2" translation="0 0 0" rotation="0 0 0 1" scale="1 1 1" castsShadows="false" receiveShadows="false" distanceBlending="false"/>
+      <!-- firstPersonNode 0>2 -->
+      <Group name="firstPersonNode" nodeId="3" translation="0 0 0" rotation="0 0 0 1" scale="1 1 1" castsShadows="false" receiveShadows="false" distanceBlending="false"/>
+      <!-- holderNode 0>3 -->
+      <Group name="holderNode" nodeId="4" translation="0 0 0" rotation="0 0 0 1" scale="1 1 1" castsShadows="false" receiveShadows="false" distanceBlending="false"/>
+    </Group>
   </Scene>
 
 </i3D>

@@ -7,8 +7,20 @@
     </title>
 
     <description>
-<en>SmartAgrometer</en>
+        <en><![CDATA[SmartAgrometer]]></en>
     </description>
+
+    <storeCategories>
+        <storeCategory category="myModTools" desc="store_category_myModTools" />
+    </storeCategories>
+
+    <l10n>
+        <text name="store_category_myModTools">
+            <en><![CDATA[My Mod Tools]]></en>
+            <de><![CDATA[Meine Mod-Werkzeuge]]></de>
+            <pl><![CDATA[Moje Narzędzia Mod]]></pl>
+        </text>
+    </l10n>
 
     <iconFilename>StoreLogo.dds</iconFilename>
 
@@ -16,5 +28,6 @@
 
     <storeItems>
         <storeItem xmlFilename="handTool.xml"/>
+        <storeItem xmlFilename="siekiera.xml"/>
     </storeItems>
 </modDesc>
