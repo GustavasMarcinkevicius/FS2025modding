@@ -1,0 +1,14 @@
+<playerHandTool type="myHandTool">
+  <storeData>
+    <name>Smart Agrometer</name>
+    <price>5000</price>
+    <category>handTools</category>
+    <image>store.dds</image>
+  </storeData>
+
+  <i3d filename="model.i3d"/>
+
+  <toolInfo>
+    <!-- Custom properties go here -->
+  </toolInfo>
+</playerHandTool>

@@ -1,0 +1,16 @@
+<modDesc descVersion="75">
+  <author>Gustavas</author>
+  <version>1.0.0.0</version>
+  <title>Smart Agrometer</title>
+  <description>Smart Agrometer</description>
+  <iconFilename>icon.dds</iconFilename>
+  <multiplayer supported="true"/>
+
+  <playerHandToolTypes>
+    <playerHandToolType name="myHandTool" className="HandToolFunction" filename="scripts/HandToolFunction.lua"/>
+  </playerHandToolTypes>
+
+  <storeItems>
+    <storeItem xmlFilename="handTool.xml"/>
+  </storeItems>
+</modDesc>
