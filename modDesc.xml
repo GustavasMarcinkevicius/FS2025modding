@@ -9,18 +9,25 @@
     <description>
         <en><![CDATA[SmartAgrometer]]></en>
     </description>
+<!-- 
+ <storeCategories>
+    <storeCategory category="chainsaws" desc="store_category_myModTools" />
+</storeCategories> -->
 
-    <storeCategories>
-        <storeCategory category="myModTools" desc="store_category_myModTools" />
-    </storeCategories>
+<l10n>
+    <text name="store_category_myModTools">
+        <en>My Mod Tools</en>
+    </text>
+</l10n>
 
-    <l10n>
-        <text name="store_category_myModTools">
-            <en><![CDATA[My Mod Tools]]></en>
-            <de><![CDATA[Meine Mod-Werkzeuge]]></de>
-            <pl><![CDATA[Moje Narzędzia Mod]]></pl>
-        </text>
-    </l10n>
+<brands>
+    <brand name="SMARTAGROMETER" title="$l10n_brand_smartAgrometer" image="AgrometerBrand.dds" />
+</brands>
+<l10n>
+    <text name="brand_smartAgrometer">
+        <en>Smart Agrometer</en>
+    </text>
+</l10n>
 
     <iconFilename>StoreLogo.dds</iconFilename>
 

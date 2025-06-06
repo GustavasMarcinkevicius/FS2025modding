@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<handTool type="chainsaw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
+<handTool type="highPressureWasherLance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
     <storeData>
         <name>
 			<en>SmartAgrometer</en>
@@ -11,7 +11,8 @@
         <price>5000</price>
         <lifetime>600</lifetime>
         <rotation>0</rotation>
-        <category>chainsaws</category>
+        <brand>SMARTAGROMETER</brand>
+        <category>handtoolsMisc</category>
         <species>HANDTOOL</species>
         <storeIconRendering>
             <settings cameraXRot="-20" cameraYRot="40"/>
@@ -27,7 +28,7 @@
     </base>
 	
 	<storable>
-        <holderType type="CHAINSAW" node="0>2"/>
+        <holderType type="HPWLANCE" node="0>2"/>
     </storable>
 	
 
