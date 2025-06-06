@@ -6,7 +6,7 @@
     <image>StoreLogo.dds</image>
   </storeData>
 
-  <i3d filename="model.i3d"/>
+  <i3d filename="ToolModel.i3d"/>
 
   <toolInfo>
     <!-- Custom properties go here -->
