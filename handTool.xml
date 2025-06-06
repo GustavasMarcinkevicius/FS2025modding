@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<handTool type="highPressureWasherLance" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
+<handTool type="chainsaw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
     <storeData>
         <name>
 			<en>SmartAgrometer</en>
@@ -21,14 +21,14 @@
 	
 	<base mass="2.0" canCrouch="true" runMultiplier="0">
         <typeDesc>Smart Agrometer tool</typeDesc>
-        <filename>ToolModel.i3d</filename>
+        <filename>siekiera.i3d</filename>
         <graphics node="0>0" lockFirstPerson="true"/>
         <handNode node="0>5" useLeftHand="true" />
         <firstPersonNode node="0>1"/>
     </base>
 	
 	<storable>
-        <holderType type="HPWLANCE" node="0>2"/>
+        <holderType type="chainsaws" node="0>2"/>
     </storable>
 	
 
