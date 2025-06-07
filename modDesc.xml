@@ -6,13 +6,14 @@
         <en>SmartAgrometer</en>
     </title>
 
+  <extraSourceFiles>
+    <sourceFile filename="hooks.lua"/>
+    <sourceFile filename="Fields.lua"/>
+  </extraSourceFiles>
+
     <description>
         <en><![CDATA[SmartAgrometer]]></en>
     </description>
-<!-- 
- <storeCategories>
-    <storeCategory category="chainsaws" desc="store_category_myModTools" />
-</storeCategories> -->
 
 <l10n>
     <text name="store_category_myModTools">
@@ -37,4 +38,6 @@
         <storeItem xmlFilename="handTool.xml"/>
         <storeItem xmlFilename="siekiera.xml"/>
     </storeItems>
+
+
 </modDesc>

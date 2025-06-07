@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="agrometras.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.5"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="priekis.jpg"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="Material" materialId="5" specularColor="0.8 1 0.8">
+      <Texture fileId="1"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="agrometras.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="agrometras" lockedgroup="true" nodeId="8">
+      <TransformGroup name="graphics" nodeId="9">
+        <Shape name="Cube" translation="0.000465823 3.61675e-11 0.000413708" rotation="90 0 180" scale="8 8 8" shapeId="1" nodeId="10" castsShadows="true" receiveShadows="true" distanceBlending="false" materialIds="5"/>
+      </TransformGroup>
+      <TransformGroup name="handNode" translation="-0.036 0.093 -0.022" rotation="-169.816 13.287 91.924" nodeId="11"/>
+      <TransformGroup name="firstPersonNode" translation="0.214 0.274 -0.565579" nodeId="12"/>
+    </TransformGroup>
+  </Scene>
+
+</i3D>
