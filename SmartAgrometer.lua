@@ -30,36 +30,39 @@ function SmartAgrometer:update(dt)
             print("DEBUG: Full file path: " .. filePath)
 
             if g_fieldManager ~= nil and g_fieldManager.fields ~= nil then
-            local numFields = #g_fieldManager.fields
-            print("DEBUG: Number of fields = " .. tostring(numFields))
-        else
-            print("DEBUG: g_fieldManager or fields is nil")
-        end
-local chemicalElements = {
-    "Nitrogen", "Phosphorus", "Potassium", "Calcium",
-    "Magnesium", "Sulfur", "Iron", "Zinc",
-    "Copper", "Manganese", "Boron", "Molybdenum"
-}
+                local chemicalElements = {
+                    "Nitrogen", "Phosphorus", "Potassium", "Calcium",
+                    "Magnesium", "Sulfur", "Iron", "Zinc",
+                    "Copper", "Manganese", "Boron", "Molybdenum"
+                }
 
-        local xmlFile = createXMLFile("SmartAgrometerData", filePath, "fields")
+                local xmlFile = createXMLFile("SmartAgrometerData", filePath, "fields")
 
-        for i = 1, #g_fieldManager.fields do
-            local field = g_fieldManager.fields[i]
-            if field ~= nil then
-                local fieldId = field.fieldId or i  -- fallback to index if no ID
-                local randomElement = chemicalElements[math.random(#chemicalElements)]
+                local fieldCount = 0
+                for i, field in pairs(g_fieldManager.fields) do
+                    if field ~= nil then
+                        fieldCount = fieldCount + 1
+                        local randomElement = chemicalElements[math.random(#chemicalElements)]
+                        local keyBase = string.format("fields.field(%d)", fieldCount - 1) -- zero-based XML index
 
-                local key = string.format("root.field(%d)", i)  -- XML uses 0-based indices
+                        -- Write field ID (just numbering 1..n)
+                        setXMLInt(xmlFile, keyBase .. "#id", fieldCount)
+                        -- Write random chemical element
+                        setXMLString(xmlFile, keyBase .. ".chemicalElement", randomElement)
 
-                setXMLInt(xmlFile, key .. "#id", fieldId)
-                setXMLString(xmlFile, key .. ".chemicalElement", randomElement)
+                        print(string.format("DEBUG: Field %d, element %s written", fieldCount, randomElement))
+                    end
+                end
+
+                print("DEBUG: Actual accessible fields counted: " .. tostring(fieldCount))
+
+                saveXMLFile(xmlFile)
+                delete(xmlFile)
+
+                print("DEBUG: XML file created and saved at " .. filePath)
+            else
+                print("DEBUG: g_fieldManager or fields is nil")
             end
-        end
-
-        saveXMLFile(xmlFile)
-        delete(xmlFile)
-        print("DEBUG: XML file populated with field data and saved")
-            print("DEBUG: XML file created at " .. filePath)
         else
             print("DEBUG: Save directory is nil, cannot create XML file")
         end
