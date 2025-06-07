@@ -9,6 +9,7 @@
   <extraSourceFiles>
     <sourceFile filename="hooks.lua"/>
     <sourceFile filename="Fields.lua"/>
+    <sourceFile filename="SmartAgrometer.lua"/>
   </extraSourceFiles>
 
     <description>

@@ -1,22 +1,18 @@
-print("My mod script loaded GUSTAVAS1 fields!")
+-- local function createEmptyXML(saveDir)
+--     if not fileExists(saveDir) then
+--         createFolder(saveDir)
+--     end
 
-SaveTest = {}
+--     local filename = saveDir .. "/smartAgrometer.xml"
+--     local xmlFile = createXMLFile("smartAgrometer", filename, "smartAgrometer")
 
--- function SaveTest:loadMap(name)
---     print("DEBUG SaveTest: Map loaded")
+--     -- No data added at all
+
+--     saveXMLFile(xmlFile)
+--     delete(xmlFile)
+--     print("Empty XML file created at: " .. filename)
 -- end
 
-function SaveTest:saveToSavegameXMLFile(xmlFile, key)
-    print("DEBUG SaveTest: Game is saving now!")
-    setXMLString(xmlFile, key .. "#myMessage", "Hello Savegame!")
-    setXMLInt(xmlFile, key .. "#myNumber", 123)
-end
-
-function SaveTest:loadFromSavegameXMLFile(xmlFile, key)
-    local msg = getXMLString(xmlFile, key .. "#myMessage")
-    local num = getXMLInt(xmlFile, key .. "#myNumber")
-    print("DEBUG SaveTest: Loaded message =", msg or "nil")
-    print("DEBUG SaveTest: Loaded number =", num or "nil")
-end
-
-addModEventListener(SaveTest)
+-- -- Example usage:
+-- local saveDir = "C:/Users/User/Documents/My Games/FarmingSimulator2025/savegame1/modSettings"
+-- createEmptyXML(saveDir)
