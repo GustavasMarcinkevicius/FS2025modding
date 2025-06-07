@@ -7,9 +7,10 @@
     </title>
 
   <extraSourceFiles>
-    <sourceFile filename="hooks.lua"/>
+    <sourceFile filename="handToolFunction.lua"/>
     <sourceFile filename="Fields.lua"/>
     <sourceFile filename="SmartAgrometer.lua"/>
+    <sourceFile filename="FieldGeneration.lua"/>
   </extraSourceFiles>
 
     <description>
