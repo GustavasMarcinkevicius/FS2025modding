@@ -29,9 +29,36 @@ function SmartAgrometer:update(dt)
 
             print("DEBUG: Full file path: " .. filePath)
 
-            local xmlFile = createXMLFile("SmartAgrometerData", filePath, "root")
-            saveXMLFile(xmlFile)
-            delete(xmlFile)
+            if g_fieldManager ~= nil and g_fieldManager.fields ~= nil then
+            local numFields = #g_fieldManager.fields
+            print("DEBUG: Number of fields = " .. tostring(numFields))
+        else
+            print("DEBUG: g_fieldManager or fields is nil")
+        end
+local chemicalElements = {
+    "Nitrogen", "Phosphorus", "Potassium", "Calcium",
+    "Magnesium", "Sulfur", "Iron", "Zinc",
+    "Copper", "Manganese", "Boron", "Molybdenum"
+}
+
+        local xmlFile = createXMLFile("SmartAgrometerData", filePath, "fields")
+
+        for i = 1, #g_fieldManager.fields do
+            local field = g_fieldManager.fields[i]
+            if field ~= nil then
+                local fieldId = field.fieldId or i  -- fallback to index if no ID
+                local randomElement = chemicalElements[math.random(#chemicalElements)]
+
+                local key = string.format("root.field(%d)", i)  -- XML uses 0-based indices
+
+                setXMLInt(xmlFile, key .. "#id", fieldId)
+                setXMLString(xmlFile, key .. ".chemicalElement", randomElement)
+            end
+        end
+
+        saveXMLFile(xmlFile)
+        delete(xmlFile)
+        print("DEBUG: XML file populated with field data and saved")
             print("DEBUG: XML file created at " .. filePath)
         else
             print("DEBUG: Save directory is nil, cannot create XML file")
