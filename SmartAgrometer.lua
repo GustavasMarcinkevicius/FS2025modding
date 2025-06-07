@@ -46,10 +46,10 @@ function SmartAgrometer:update(dt)
 
         print("DEBUG: Full file path: " .. filePath)
 
-        if fileExists(filePath) then
-            print("DEBUG: XML file already exists at " .. filePath .. ", skipping creation.")
-            return
-        end
+        -- if fileExists(filePath) then
+        --     print("DEBUG: XML file already exists at " .. filePath .. ", skipping creation.")
+        --     return
+        -- end
 
         if g_farmlandManager == nil or g_farmlandManager.farmlands == nil then
             print("DEBUG: g_farmlandManager or farmlands table is nil, cannot proceed")
