@@ -37,7 +37,6 @@
 
     <storeItems>
         <storeItem xmlFilename="handTool.xml"/>
-        <storeItem xmlFilename="siekiera.xml"/>
     </storeItems>
 
 
