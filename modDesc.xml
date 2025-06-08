@@ -13,7 +13,7 @@
         <sourceFile filename="FieldGeneration.lua"/>
     </extraSourceFiles>
 <handToolTypes>
-    <handToolType name="shovel" className="SmartAgrometerHandTool" filename="handToolFunction.lua" />
+    <handToolType name="flashlight" className="SmartAgrometerHandTool" filename="handToolFunction.lua" />
 </handToolTypes>
 
     <description>
@@ -39,7 +39,18 @@
 
     <storeItems>
         <storeItem xmlFilename="handTool.xml"/>
-        <storeItem xmlFilename="NitrogenFertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/B/B_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Ca/Ca_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Cu/Cu_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Fe/Fe_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/K/K_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Mg/Mg_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Mn/Mn_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Mo/Mo_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/N/N_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/P/P_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/S/S_Fertilizer.xml"/>
+        <storeItem xmlFilename="Fertilizers/Zn/Zn_Fertilizer.xml"/>
     </storeItems>
 
 <inputBindings>
