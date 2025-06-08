@@ -9,7 +9,7 @@ The mod does this to every field:
 
 A player can:
 - Using the SmartAgrometer tool scan any field he wants to know the info of (plants need to be growing there)❌
-- Buy a specific kind of fertilizer which the field needs ❌
+- Buy a specific kind of fertilizer which the field needs ✅
 - If fertilized correctly, the yield increases by x%❌
 
 
