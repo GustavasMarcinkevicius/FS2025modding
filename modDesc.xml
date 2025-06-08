@@ -9,7 +9,6 @@
     <extraSourceFiles>
         <sourceFile filename="handToolFunction.lua"/>
         <sourceFile filename="Fields.lua"/>
-        <sourceFile filename="SmartAgrometer.lua"/>
         <sourceFile filename="FieldGeneration.lua"/>
     </extraSourceFiles>
 <handToolTypes>
@@ -40,6 +39,7 @@
     <storeItems>
         <storeItem xmlFilename="handTool.xml"/>
         <storeItem xmlFilename="Fertilizers/B/B_Fertilizer.xml"/>
+
         <storeItem xmlFilename="Fertilizers/Ca/Ca_Fertilizer.xml"/>
         <storeItem xmlFilename="Fertilizers/Cu/Cu_Fertilizer.xml"/>
         <storeItem xmlFilename="Fertilizers/Fe/Fe_Fertilizer.xml"/>
@@ -53,7 +53,9 @@
         <storeItem xmlFilename="Fertilizers/Zn/Zn_Fertilizer.xml"/>
     </storeItems>
 
-<inputBindings>
-    <input name="SMARTAGROMETER_SCAN" category="HAND_TOOL" key1="MOUSE_1"/>
-</inputBindings>
+<inputActions>
+    <file filename="InputActions.xml" />
+</inputActions>
+
+<inputBindingDefaults filename="InputBindingDefault.xml" />
 </modDesc>

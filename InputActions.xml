@@ -1,0 +1,5 @@
+<!-- InputActions.xml -->
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<inputActions>
+    <action name="SMARTAGROMETER_SCAN" category="flashlight" />
+</inputActions>

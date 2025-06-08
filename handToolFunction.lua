@@ -1,36 +1,19 @@
 print("DEBUG: SmartAgrometerHandTool class loaded")
+print("DEBUG: InputAction.SMARTAGROMETER_SCAN =", InputAction.SMARTAGROMETER_SCAN)
 
 SmartAgrometerHandTool = {}
-local SmartAgrometerHandTool_mt = Class(SmartAgrometerHandTool, HandTool)
+local SmartAgrometerHandTool_mt = Class(SmartAgrometerHandTool, Flashlight)
 InitObjectClass(SmartAgrometerHandTool, "SmartAgrometerHandTool")
-
-if allowInput and g_inputBinding:getDigitalInputJustPressed(InputAction.SMARTAGROMETER_SCAN) then
-    print("DEBUG: Left click detected!")
-    self:scanFieldUnderPlayer()
-end
-
-function SmartAgrometerHandTool:new(isServer, isClient)
-    print("DEBUG: SmartAgrometerHandTool:new() called")
-    local self = HandTool:new(isServer, isClient)
-    setmetatable(self, SmartAgrometerHandTool_mt)
-    return self
-end
-
-function SmartAgrometerHandTool:onEquip()
-    print("DEBUG: SmartAgrometerHandTool equipped!")
-end
 
 function SmartAgrometerHandTool:update(dt, allowInput)
     SmartAgrometerHandTool:superClass().update(self, dt, allowInput)
-    print("DEBUG: SmartAgrometerHandTool:update")
+
+    if InputAction.SMARTAGROMETER_SCAN == nil then
+        print("DEBUG: InputAction.SMARTAGROMETER_SCAN is nil during update")
+    end
 
     if allowInput and g_inputBinding:getDigitalInputJustPressed(InputAction.SMARTAGROMETER_SCAN) then
-        print("DEBUG: Scan input triggered!")
+        print("DEBUG: SMARTAGROMETER_SCAN triggered")
         self:scanFieldUnderPlayer()
     end
-end
-
-function SmartAgrometerHandTool:scanFieldUnderPlayer()
-    print("DEBUG: Scanning field!")
-    g_currentMission:addIngameNotification(FSBaseMission.INGAME_NOTIFICATION_OK, "Scan complete!")
 end

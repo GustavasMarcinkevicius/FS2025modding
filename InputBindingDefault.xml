@@ -1,0 +1,12 @@
+<!-- InputBindingDefault.xml -->
+
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<inputBindingDefaults>
+    <category name="flashlight">
+        <action name="SMARTAGROMETER_SCAN">
+            <key name="K" />  <!-- Default key binding: K -->
+            <!-- You can add controller buttons here as well, e.g.: -->
+            <!-- <button name="BUTTON_A" /> -->
+        </action>
+    </category>
+</inputBindingDefaults>
