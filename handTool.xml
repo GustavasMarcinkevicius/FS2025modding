@@ -1,4 +1,5 @@
-<handTool type="chainsaw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<handTool type="shovel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
     <storeData>
         <name>
             <en>SmartAgrometer</en>
@@ -21,39 +22,9 @@
         <graphics node="0>0" lockFirstPerson="true"/>
         <handNode node="0>1" useLeftHand="true"/>
         <firstPersonNode node="0>2"/>
+        <lightNode node="0>0>0"/>
     </base>
 
-    <!-- THIS LINKS LUA CLASS TO THE TOOL -->
     <className>SmartAgrometerHandTool</className>
     <filename>handToolFunction.lua</filename>
 </handTool>
-
-
-<!-- <handTool type="chainsaw" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/handtool.xsd">
-    <storeData>
-        <name>
-            <en>SmartAgrometer</en>
-        </name>
-        <image>AgrometerPNG.png</image>
-        <price>5000</price>
-        <lifetime>600</lifetime>
-        <rotation>0</rotation>
-        <brand>SMARTAGROMETER</brand>
-        <category>handtoolsMisc</category>
-        <species>HANDTOOL</species>
-        <storeIconRendering>
-            <settings cameraXRot="-20" cameraYRot="40"/>
-        </storeIconRendering>
-    </storeData>
-
-    <base mass="2.0" canCrouch="true" runMultiplier="0">
-        <typeDesc>Smart Agrometer tool</typeDesc>
-        <filename>agrometras.i3d</filename>
-        <graphics node="0>0" lockFirstPerson="true"/>
-        <handNode node="0>1" useLeftHand="true" />
-        <firstPersonNode node="0>2"/>
-
-    </base>
-</handTool> -->
-
-

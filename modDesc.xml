@@ -6,31 +6,32 @@
         <en>SmartAgrometer</en>
     </title>
 
-  <extraSourceFiles>
-    <sourceFile filename="handToolFunction.lua"/>
-    <sourceFile filename="Fields.lua"/>
-    <sourceFile filename="SmartAgrometer.lua"/>
-    <sourceFile filename="FieldGeneration.lua"/>
-  </extraSourceFiles>
+    <extraSourceFiles>
+        <sourceFile filename="handToolFunction.lua"/>
+        <sourceFile filename="Fields.lua"/>
+        <sourceFile filename="SmartAgrometer.lua"/>
+        <sourceFile filename="FieldGeneration.lua"/>
+    </extraSourceFiles>
+<handToolTypes>
+    <handToolType name="shovel" className="SmartAgrometerHandTool" filename="handToolFunction.lua" />
+</handToolTypes>
 
     <description>
         <en><![CDATA[SmartAgrometer]]></en>
     </description>
 
-<l10n>
-    <text name="store_category_myModTools">
-        <en>My Mod Tools</en>
-    </text>
-</l10n>
+    <l10n>
+        <text name="store_category_myModTools">
+            <en>My Mod Tools</en>
+        </text>
+        <text name="brand_smartAgrometer">
+            <en>Smart Agrometer</en>
+        </text>
+    </l10n>
 
-<brands>
-    <brand name="SMARTAGROMETER" title="$l10n_brand_smartAgrometer" image="AgrometerBrand.dds" />
-</brands>
-<l10n>
-    <text name="brand_smartAgrometer">
-        <en>Smart Agrometer</en>
-    </text>
-</l10n>
+    <brands>
+        <brand name="SMARTAGROMETER" title="$l10n_brand_smartAgrometer" image="AgrometerBrand.dds" />
+    </brands>
 
     <iconFilename>StoreLogo.dds</iconFilename>
 
@@ -38,7 +39,10 @@
 
     <storeItems>
         <storeItem xmlFilename="handTool.xml"/>
+        <storeItem xmlFilename="NitrogenFertilizer.xml"/>
     </storeItems>
 
-
+<inputBindings>
+    <input name="SMARTAGROMETER_SCAN" category="HAND_TOOL" key1="MOUSE_1"/>
+</inputBindings>
 </modDesc>
