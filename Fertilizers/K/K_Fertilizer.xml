@@ -12,7 +12,7 @@
             <fillTypes>liquidFertilizer</fillTypes>
             <weight ignore="true"/>
         </specs>
-        <image>store_fertilizerTank.png</image>
+        <image>Fertilizers/K/K_store.png</image>
         <price>69</price>
         <allowLeasing>false</allowLeasing>
         <canBeSold>false</canBeSold>
